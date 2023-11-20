@@ -31,8 +31,16 @@ exports.createAndSendToken = (newReader, statusCode, res) => {
 };
 
 exports.createAndSendLogoutToken = (newReader, statusCode, res) => {
+  const cookieOptions = {
+    maxAge: 0,
+    httpOnly: true,
+    sameSite: 'none'
+  };
+
+  if (environment === "production") cookieOptions.secure = true;
+
   res
-    .clearCookie('jwt', { httpOnly: true, sameSite: 'none' })
+    .clearCookie('jwt', cookieOptions)
     .status(statusCode).json({
       status: "success",
       message: "Succesfully Logged Out",
