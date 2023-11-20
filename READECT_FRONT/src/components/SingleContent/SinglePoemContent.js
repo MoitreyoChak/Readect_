@@ -13,10 +13,10 @@ const bookmarkAPI = "/api/v1/reader";
 
 function SinglePoemContent({ name, description, author }) {
   const { type, id } = useParams();
-  console.log(type, id);
+  // console.log(type, id);
   const { content } = useSingleContext();
   const { profile } = useProfileContext();
-  console.log(content);
+  // console.log(content);
   const [like, setLike] = useState(false);
   const [bookmark, setBookmark] = useState(false);
 

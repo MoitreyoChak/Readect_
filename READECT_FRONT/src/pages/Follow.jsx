@@ -9,8 +9,8 @@ const FollowAPI = "/api/v1/reader"
 function Follow() {
     const { content } = useSingleContext();
     const { profile } = useProfileContext();
-    console.log(JSON.stringify(content.userId));
-    console.log(profile.followings);
+    // console.log(JSON.stringify(content.userId));
+    // console.log(profile.followings);
     const [follow, SetFollow] = useState(false);
     const DoFollow = (e) => {
         profile?.followings?.map((ele, i) => {

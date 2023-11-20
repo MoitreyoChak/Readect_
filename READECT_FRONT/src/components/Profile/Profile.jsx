@@ -23,7 +23,7 @@ function Profile() {
 
     const DoLogout = async (e) => {
         e.preventDefault();
-        const check = await logout(LogoutAPI);
+        await logout(LogoutAPI);
         await checkLogin(LoggedCheckAPI);
         toast.success("Logout Succesfully");
         Navigate("/");

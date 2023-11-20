@@ -19,7 +19,6 @@ exports.createAndSendToken = (newReader, statusCode, res) => {
 
   if (environment === "production") cookieOptions.secure = true;
 
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
   res.cookie("jwt", token, cookieOptions);
 
   res.status(statusCode).json({
@@ -32,19 +31,10 @@ exports.createAndSendToken = (newReader, statusCode, res) => {
 };
 
 exports.createAndSendLogoutToken = (newReader, statusCode, res) => {
-  const token = createToken(newReader._id, 0);
-  const cookieOptions = {
-    expiresIn: 0,
-    // expries: new Date(Date.now()),
-    httpOnly: true,
-  };
-
-  //if (environment === "production") cookieOptions.secure = true;
-  res.cookie("jwt", "", cookieOptions);
-  res.status(statusCode).json({
-    status: "success",
-    // token,
-    // message: specialMessage ? specialMessage : "Successfully logged out",
-    message: "Succesfully Logged Out",
-  });
+  res
+    .clearCookie('jwt')
+    .status(statusCode).json({
+      status: "success",
+      message: "Succesfully Logged Out",
+    });
 };
