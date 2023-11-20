@@ -23,7 +23,12 @@ const ProfileProvider = ({ children }) => {
   //login using axios
   const login = async (url, body) => {
     try {
-      const { data } = await axios.post(url, body, { withCredentials: true });
+      const { data } = await axios.post(url, body, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
+      });
       console.log(data)
       dispatch({ type: "LOGIN_SUCCESS" });
       return false;
@@ -49,7 +54,7 @@ const ProfileProvider = ({ children }) => {
   //Check if logged in
   const checkLogin = async (url) => {
     try {
-      const resp = await axios.get(url, { withCredentials: true });
+      const resp = await axios.get(url);
       if (resp.data.status === "Success") {
         dispatch({ type: "LOGGED_IN" });
         return true;

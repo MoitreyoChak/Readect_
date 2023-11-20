@@ -18,6 +18,9 @@ exports.createAndSendToken = (newReader, statusCode, res) => {
 
   if (environment === "production") cookieOptions.secure = true;
 
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
   res.cookie("jwt", token, cookieOptions);
 
   res.status(statusCode).json({
