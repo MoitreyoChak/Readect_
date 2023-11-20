@@ -16,7 +16,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const cookieParser = require("cookie-parser");
 const { getOtherReader } = require("./controllers/otherReaderController");
 
-app.use(cors({ origin: process.env.FRONTEND_URL }));
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
 
 const limiter = rateLimit({
   max: 1000,

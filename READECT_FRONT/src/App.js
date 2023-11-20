@@ -19,6 +19,7 @@ const LoggedCheckAPI = "/api/v1/reader/ifLoggedIn";
 const MyProfileApi = "/api/v1/reader/";
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+axios.defaults.withCredentials = true;
 
 const App = () => {
   const { checkLogin, loggedInStatus, getMyProfile } = useProfileContext();
