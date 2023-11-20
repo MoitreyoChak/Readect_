@@ -27,7 +27,7 @@ exports.ifLoggedIn = catchAsync(async (req, res, next) => {
       )
     );
   else {
-    const check = await promisify(jwt.verify)(
+    await promisify(jwt.verify)(
       token,
       "my-super-secret-string-is-superb"
     );

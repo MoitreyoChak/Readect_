@@ -37,7 +37,7 @@ function Login() {
       return;
     }
     // navigate("/");
-    await checkLogin(LoggedCheckAPI);
+    // await checkLogin(LoggedCheckAPI);
     toast.success("Login Success");
   };
   return (
