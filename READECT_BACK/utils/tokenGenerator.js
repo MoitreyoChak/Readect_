@@ -32,7 +32,7 @@ exports.createAndSendToken = (newReader, statusCode, res) => {
 
 exports.createAndSendLogoutToken = (newReader, statusCode, res) => {
   res
-    .clearCookie('jwt')
+    .clearCookie('jwt', { httpOnly: true, sameSite: 'none' })
     .status(statusCode).json({
       status: "success",
       message: "Succesfully Logged Out",
