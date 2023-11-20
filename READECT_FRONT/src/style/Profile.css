@@ -1,0 +1,346 @@
+.dark-theme {
+    --main-bg: #1b1b1b;
+    --main-contrast: white;
+    --contrast: #ffffff9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+.light-theme {
+    --main-bg: rgb(255, 255, 255);
+    --main-contrast: #1b1b1b;
+    --contrast: #1b1b1b9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+body {}
+
+.all-profile {
+    display: flex;
+}
+
+.profile-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--main-contrast);
+    font-family: 'Inter', sans-serif;
+    height: 75vh;
+    width: 30%;
+    gap: 1rem;
+    background-color: var(--main-bg);
+    /* border-radius: 0rem 0rem 1.5rem 1.5rem; */
+}
+
+.my-profile-label {
+    color: var(--main-contrast);
+    background-color: var(--main-bg);
+    border-bottom: 1px solid var(--main-contrast);
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+}
+
+.my-profile-label .label {
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1.2px;
+    margin-left: 1rem;
+}
+
+.profile-details {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-area {
+    height: 15rem;
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.profile-img img {
+    height: 12rem;
+    border-radius: 6rem;
+    border: 1px solid var(--main-contrast);
+}
+
+.profile-name {
+    color: var(--main-contrast);
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-data-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: 0.7px;
+    gap: 2rem;
+    height: 7rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--main-bg);
+    box-shadow: inset 2px 2px 5px black;
+    color: var(--main-contrast);
+}
+
+.my-data-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* FOLLOW POP UP  */
+.follow-pop-up {
+    padding: 1rem;
+    z-index: 9999;
+    position: absolute;
+    background-color: var(--main-purple);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 20rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.562);
+    border-radius: 0.5rem;
+}
+
+.follow-label {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.people-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 13rem;
+    min-height: 5rem;
+    gap: 0.2px;
+    overflow: scroll;
+    color: black;
+    background-color: white;
+    box-shadow: inset 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.people-list::-webkit-scrollbar {
+    display: none;
+}
+
+.each-person {
+    padding: 0.3rem 1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+
+.content-upload-area {
+    display: flex;
+    justify-content: center;
+}
+
+/* MY UPLOADS  */
+.my-uploads-area {
+    padding: 1rem 2rem;
+    background-color: var(--main-bg);
+    width: 40%;
+}
+
+.my-uploads-head {
+    display: flex;
+    gap: 1rem;
+    color: var(--main-contrast);
+}
+
+.my-uploads-label {
+    text-transform: capitalize;
+    color: var(--main-contrast);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1.2px 1px var(--main-contrast);
+    margin-bottom: 1rem;
+}
+
+.upload-btn svg {
+    color: var(--main-contrast);
+    margin-top: 2px;
+    font-size: 2rem;
+}
+
+.show-type {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+
+.show-type-btn {
+    background-color: var(--main-bg);
+    color: var(--main-contrast);
+    padding: 0.3rem;
+    border-top: 3px solid var(--main-purple);
+    border-bottom: 3px solid var(--main-purple);
+    width: 100%;
+    text-align: center;
+}
+
+.type-active {
+    color: var(--main-contrast);
+    /* background-image: linear-gradient(to right, var(--main-purple), var(--main-pink)); */
+    border-left: 3px solid var(--main-purple);
+    border-right: 3px solid var(--main-purple);
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+
+.my-all-uploads {
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    width: 100%;
+    background-image: linear-gradient(to bottom, var(--main-bg) 10%, var(--main-purple) 150%);
+    border-radius: 0.2rem;
+}
+
+.my-all-uploads::-webkit-scrollbar {
+    display: none;
+}
+
+.upload-element {
+    display: flex;
+    text-decoration: none;
+    color: var(--main-contrast);
+    text-transform: uppercase;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--main-purple);
+    border-left: 3px solid var(--main-purple);
+    border-right: 3px solid var(--main-purple);
+}
+
+
+/* My Liked  */
+.my-liked-area {
+    width: 30%;
+    padding: 2rem;
+    background-color: var(--main-bg);
+}
+
+/* .my-liked {
+    box-shadow: inset 2px 2px 4px black;
+} */
+
+.my-liked-label {
+    color: var(--main-contrast);
+    font-size: 2rem;
+}
+
+.liked-type {
+    color: var(--main-contrast);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.liked-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.4rem;
+}
+
+.arrow {
+    font-size: 1rem;
+    margin-right: 0.3rem;
+}
+
+.liked-element {
+    text-decoration: none;
+    color: var(--main-contrast);
+    font-size: 0.7rem;
+    padding-top: 0.2rem;
+    text-transform: capitalize;
+}
+
+
+/* Bookmarks  */
+.read-late-uploads-area {
+    width: 100%;
+    height: 100vh;
+}
+
+.read-late-uploads-all {
+    /* min-height: 80vh; */
+    min-height: 0;
+}
+
+.follow-each-person {
+    text-decoration: none;
+}
+
+.follow-show-btn {
+    padding: 0.6rem;
+    min-width: 5rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 1px 1px 2px var(--main-contrast);
+}
+
+.follow-show {
+    background-color: white;
+}
+
+.following-show {
+    background-color: var(--main-purple);
+}
+
+
+
+
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 980px) {
+    .all-profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-area {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .my-uploads-area {
+        width: 100%;
+    }
+
+    .my-liked-area {
+        width: 100%;
+    }
+}

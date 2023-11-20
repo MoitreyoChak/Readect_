@@ -1,0 +1,314 @@
+.dark-theme {
+    --main-bg: #1b1b1b;
+    --main-contrast: white;
+    --contrast: #ffffff9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+.light-theme {
+    --main-bg: #fff3fb;
+    --main-contrast: #1b1b1b;
+    --contrast: #1b1b1b9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.loader {
+    color: var(--main-purple);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+}
+
+
+
+/* navbar  */
+.navbar {
+    background-color: var(--main-bg);
+    border-bottom: 1px solid var(--contrast);
+    color: var(--contrast);
+    padding: 0.6rem 2rem;
+    width: 100vw;
+}
+
+.nav-title {
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(var(--main-purple), var(--main-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-mobile-title {
+    display: none;
+}
+
+.nav-items {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-item {
+    font-family: cursive;
+    color: var(--main-contrast);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-item:hover {
+    /* background: -webkit-linear-gradient(var(--main-purple), var(--main-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: var(--main-purple);
+}
+
+.nav-login-btn {
+    background-color: var(--main-contrast);
+    border: none;
+    padding: 0.4rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg);
+}
+
+.nav-login-btn:hover {
+    background-image: linear-gradient(to right, var(--main-purple), var(--main-pink));
+    color: white;
+}
+
+
+
+.drop:hover {
+    background-color: darkslategray;
+    color: white;
+}
+
+
+.nav-prof {
+    font-size: 1.8rem;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+
+.theme-select {
+    color: var(--main-contrast);
+    font-size: 1.5rem;
+}
+
+.follow-each-person {
+    color: black;
+}
+
+
+@media (max-width: 980px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid var(--main-contrast);
+        background-color: var(--main-bg);
+        padding: 0.5rem;
+        position: fixed;
+        bottom: 0;
+        font-size: 2rem;
+        z-index: 9999;
+    }
+
+
+    .navbar-mobile a {
+        color: var(--main-contrast);
+        /* background: -webkit-linear-gradient(var(--main-purple), var(--main-pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+    }
+
+    .nav-mobile-title {
+        background-color: var(--main-bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem 1.5rem;
+        border-bottom: 1px solid var(--main-contrast);
+    }
+
+    .nav-mobile-title .text {
+        font-family: 'Qwitcher Grypen', cursive;
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+        background: -webkit-linear-gradient(var(--main-purple), var(--main-pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .mobile-hero {
+        display: inline-block;
+    }
+
+    .laptop-hero {
+        display: none;
+    }
+}
+
+
+/* loading page  */
+.loader {
+    height: 90vh;
+
+}
+
+
+
+
+.updateArea {
+    height: 100vh;
+    background-image: linear-gradient(180deg,
+            hsl(283deg 61% 47%) 0%,
+            hsl(292deg 63% 44%) 11%,
+            hsl(300deg 66% 41%) 22%,
+            hsl(307deg 71% 42%) 33%,
+            hsl(312deg 75% 43%) 44%,
+            hsl(317deg 77% 44%) 56%,
+            hsl(321deg 77% 45%) 67%,
+            hsl(325deg 75% 47%) 78%,
+            hsl(329deg 72% 48%) 89%,
+            hsl(333deg 68% 50%) 100%);
+}
+
+.contentUpdateArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contentUpdateArea textarea {
+    background-color: #fed97576;
+    outline: none;
+    border: none;
+}
+
+.contentUpdateArea button {
+    width: 10rem;
+    padding: 0.5rem;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 2rem;
+    color: #fff;
+    background-image: linear-gradient(90deg,
+            hsl(161deg 100% 42%) 0%,
+            hsl(153deg 73% 51%) 27%,
+            hsl(145deg 73% 56%) 46%,
+            hsl(135deg 74% 61%) 60%,
+            hsl(124deg 75% 65%) 71%,
+            hsl(110deg 79% 65%) 79%,
+            hsl(99deg 84% 63%) 86%,
+            hsl(90deg 88% 60%) 91%,
+            hsl(82deg 91% 56%) 96%,
+            hsl(74deg 100% 48%) 100%);
+}
+
+
+
+
+
+
+/* Rqst Login */
+.rqst-login-popup {
+    font-family: cursive;
+    width: 28rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(3, 123, 113);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.509);
+    color: rgb(230, 250, 255);
+    text-shadow: 2px 2px black;
+}
+
+.rqst-back {
+    width: 100%;
+    text-align: left;
+}
+
+.rqst-back button {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.rqst-back button:hover {
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgb(230, 250, 255);
+    color: black;
+}
+
+.rqst-login-btn {
+    box-shadow: inset 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(230, 250, 255);
+    width: 6rem;
+    padding: 0.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.rqst-login-btn:hover {
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+.aluu1 {
+    color: white;
+}
+
+.aluu {
+    color: white;
+    font-size: 2rem;
+}

@@ -1,0 +1,219 @@
+:root {
+    --main-bg: #962fbf;
+    --bg-pink: #d62976;
+    --bg-blue: #4f5bd5;
+    --main-color: #feda75;
+    --main-orange: #fa7e1e;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.pagination {
+    margin-top: 1rem;
+    text-transform: capitalize;
+    color: var(--main-contrast)
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--main-contrast);
+    text-transform: capitalize;
+}
+
+.single-poem-area {
+    display: flex;
+    flex-direction: column;
+    color: var(--main-contrast)
+}
+
+
+.content-image-area {
+    height: 17rem;
+}
+
+.content-cover-img {
+    height: 15rem;
+    width: 10rem;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 5px rgb(4, 61, 16);
+}
+
+
+
+
+.poem-name {
+    font-size: 2rem;
+    margin: 0.3rem;
+    font-weight: 600;
+    font-family: 'Comic Neue', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.authorname {
+    margin-left: 6rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgba(71, 70, 70, 0.728);
+}
+
+.author-span {
+    text-transform: capitalize;
+}
+
+/* The Main Content  */
+.single-content {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    background-color: rgba(61, 217, 129, 0.13);
+    padding: 1.5rem 3rem;
+    border-radius: 0.6rem;
+    box-shadow: inset 1px 1px 5px rgba(47, 79, 79, 0.498);
+    min-width: 37rem;
+    max-width: 40rem;
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-lines {
+    text-align: justify;
+    width: auto;
+}
+
+
+
+/* Follow Area  */
+.single-content-follow {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    text-decoration: none;
+    color: black;
+}
+
+.author-name span {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.follow-btn {
+    margin-top: 0.3rem;
+    width: 10rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgba(36, 65, 105, 0.315);
+    padding: 0.5rem 0rem;
+}
+
+
+.following {
+    background-color: #4fd596;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.content-features {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+/* comment area  */
+.content-comment-area {
+    /* background-color: rgba(0, 139, 139, 0.144); */
+    min-height: 20rem;
+}
+
+.comment-area {
+    display: flex;
+    background-color: rgba(0, 139, 139, 0.144);
+    gap: 0.5rem;
+    border-radius: 2rem;
+    box-shadow: inset 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.comment-area input {
+    background-color: #210c5900;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+.comment-area button {
+    /* background-color: rgba(236, 111, 8, 0.511); */
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 2rem;
+}
+
+.all-comments {
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    min-height: 10vh;
+    background-color: rgba(42, 201, 201, 0.062);
+    border-radius: 1rem;
+    overflow: scroll;
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.all-comments::-webkit-scrollbar {
+    display: none;
+}
+
+.single-comment-area {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.505);
+    padding-bottom: 0.5rem;
+}
+
+.single-comment-text {
+    width: 100%;
+    text-align: left;
+}
+
+.comment-name {
+    font-weight: 600;
+}
+
+.single-comment-time {
+    font-size: 0.6rem;
+}
+
+
+
+
+@media (max-width: 980px) {
+    .content {
+        min-width: 21rem;
+        max-width: 23rem;
+        padding: 1rem 2rem;
+    }
+}

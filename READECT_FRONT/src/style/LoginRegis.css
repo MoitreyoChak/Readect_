@@ -1,0 +1,163 @@
+.dark-theme {
+    --main-bg: #1b1b1b;
+    --main-contrast: white;
+    --contrast: #ffffff9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+.light-theme {
+    --main-bg: white;
+    --main-contrast: #1b1b1b;
+    --contrast: #1b1b1b9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+.login-page,
+.regis-page {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    background-color: var(--main-bg);
+    font-family: 'Inter', sans-serif;
+}
+
+/* login form   */
+.login-cont,
+.registration-cont {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg);
+    height: 19rem;
+    margin-top: 10%;
+    padding: 0rem 2rem;
+    font-family: cursive;
+    align-items: center;
+    position: relative;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 8px;
+    border-image-source: linear-gradient(to right, var(--main-purple), var(--main-pink));
+    /* box-shadow: 2px 2px 4px 4px rgba(47, 79, 79, 0.502); */
+}
+
+.registration-cont {
+    margin-top: 5%;
+    height: 25rem;
+}
+
+.data-enter {
+    display: flex;
+}
+
+.UserEmail {
+    margin-top: 4.6rem;
+}
+
+.UserEmail-regis {
+    margin-top: 1rem;
+}
+
+.Password {
+    margin-top: 1rem;
+}
+
+.logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-contrast);
+    color: var(--main-bg);
+}
+
+.input {
+    padding: 0.4rem;
+    outline: none;
+    border: none;
+    background-color: var(--contrast);
+    color: var(--main-bg);
+    letter-spacing: 1px;
+    width: 16rem;
+}
+
+.input::placeholder {
+    color: var(--main-bg);
+    letter-spacing: 0.3px;
+}
+
+.login-btn,
+.regis-btn {
+    padding: 0.5rem;
+    width: 8rem;
+    background-color: var(--main-contrast);
+    color: var(--main-bg);
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+}
+
+.regis-btn {
+    margin-top: 1.9rem;
+}
+
+.login-btn:hover,
+.regis-btn:hover {
+    background-image: linear-gradient(to right, var(--main-purple), var(--main-pink));
+}
+
+.forget-pass {
+    font-size: 0.8rem;
+    color: var(--main-contrast);
+}
+
+.profile-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 3.5rem;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--main-contrast);
+    color: var(--main-bg);
+    border-radius: 5rem;
+}
+
+.not-a-member {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+    letter-spacing: 0.2px;
+    color: var(--main-contrast);
+}
+
+.not-a-member a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 980px) {
+    .login-cont {
+        margin-top: 22vh;
+    }
+
+    .registration-cont {
+        margin-top: 18vh;
+    }
+
+    .login-btn,
+    .regis-btn {
+        background-image: linear-gradient(to right, var(--main-purple), var(--main-pink));
+    }
+}

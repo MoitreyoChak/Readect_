@@ -1,0 +1,309 @@
+.dark-theme {
+    --main-bg: #1b1b1b;
+    --main-contrast: white;
+    --contrast: #ffffff9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+.light-theme {
+    --main-bg: white;
+    --main-contrast: #1b1b1b;
+    --contrast: #1b1b1b9e;
+    --main-purple: #743ad5;
+    --main-pink: #d53a9d;
+    --main-blue: #4f5bd5;
+    --main-yellow: #feda75;
+    --main-yellow: #fa7e1e;
+}
+
+/* heropage  */
+.main-part {
+    font-family: cursive;
+    height: 70vh;
+    justify-content: center;
+    background-color: var(--main-bg);
+    border-bottom: 1px solid var(--main-contrast);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    color: var(--main-contrast);
+}
+
+.hero-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    height: 20rem;
+}
+
+.mobile-hero {
+    display: none;
+}
+
+.laptop-hero {
+    display: inline-block;
+}
+
+.hero-btn {
+    margin: 0.5rem;
+    border-radius: 1.5rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.518);
+}
+
+.hero-btn:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.518);
+    background-image: linear-gradient(to right, var(--main-purple), var(--main-pink));
+    color: var(--main-contrast);
+}
+
+
+
+/* diffcategories */
+.diffcategories-part {
+    background-color: var(--main-bg);
+    padding: 1rem 0rem;
+}
+
+.diffcategories {
+    padding: 2rem;
+    padding-bottom: 4rem;
+    border-radius: 12rem 0rem 12rem 0;
+    /* background-color: var(--main-purple); */
+    border: 2px solid var(--main-purple);
+}
+
+.diffcategories .title {
+    background: -webkit-linear-gradient(var(--main-purple), var(--main-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.categories-box a {
+    text-decoration: none;
+    color: black
+}
+
+
+
+.box {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.our-category {
+    margin-top: 3rem;
+    padding-bottom: 30px;
+    padding: 0 30px;
+    min-height: 198px;
+    text-align: center;
+    color: #000;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.our-category .icon {
+    margin-bottom: -21px;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.our-category h4 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.our-category {
+    margin-top: 75px;
+    padding-bottom: 30px;
+    padding: 0 30px;
+    min-height: 198px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 25px 0 rgba(20, 27, 202, 0.17);
+}
+
+.our-category .icon {
+    margin-bottom: -21px;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.our-category h4 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.our-category:hover h4,
+.our-category:hover p {
+    color: #fff;
+}
+
+/* .poems:hover {
+    box-shadow: 0 0 25px 0 rgba(33, 39, 221, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+} */
+
+.articles:hover,
+.poems:hover,
+.books:hover,
+.shortstories:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, var(--main-pink) 0%, var(--main-purple) 50%);
+}
+
+/* .shortstories:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #5035ec 0%, #44a2f6 50%);
+}
+
+.books:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #fd7f30 0%, #fdb642 50%);
+} */
+
+.our-category .icon {
+    background-image: linear-gradient(-45deg, var(--main-pink) 0%, var(--main-purple) 50%);
+    border-radius: 54% 46% 33% 67% / 64% 66% 34% 36%;
+    height: 3rem;
+    width: 3rem;
+    color: white;
+}
+
+/* 
+.poems .icon,
+.books .icon,
+.articles .icon,
+.shortstories .icon {
+    background-image: linear-gradient(-45deg, #49d0da 0%, var(--main-purple) 100%);
+} */
+
+/* .poems .icon,
+.books .icon,
+.articles .icon,
+.shortstories .icon {
+    background-image: linear-gradient(-45deg, #49d0da 0%, #210c59 50%);
+} */
+
+/* .poems .icon {
+    background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+} */
+
+/* .shortstories .icon {
+    background-image: linear-gradient(-45deg, #5035ec 0%, #44a2f6 50%);
+}
+
+.books .icon {
+    background-image: linear-gradient(-45deg, #fd7f30 0%, #fdb642 50%);
+} */
+
+@media (max-width: 980px) {
+    .profile svg {
+        display: none;
+    }
+
+    .service-style .sub-heading,
+    .contact-style .sub-heading {
+        font-size: 2rem;
+    }
+
+    .hero-btn {
+        background-image: linear-gradient(to right, var(--main-purple), var(--main-pink));
+        border: 1px solid var(--contrast);
+    }
+
+
+    .articles,
+    .poems,
+    .books,
+    .shortstories {
+        background-image: linear-gradient(-45deg, var(--main-pink) 0%, var(--main-purple) 50%);
+        color: white;
+    }
+
+    /* .poems {
+        background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+        color: white;
+    }
+    .shortstories {
+        background-image: linear-gradient(-45deg, #5035ec 0%, #44a2f6 50%);
+        color: white;
+    }
+
+    .books {
+        background-image: linear-gradient(-45deg, #fd7f30 0%, #fdb642 50%);
+        color: white;
+    } */
+
+    .diffcategories {
+        border-radius: 6rem 0 6rem 0;
+    }
+}
+
+/* 
+Categories on hover 
+.our-category:hover h4,
+.our-category:hover p {
+    color: #fff;
+}
+
+.poems:hover,
+.articles:hover {
+    box-shadow: 0 0 25px 0 rgba(33, 39, 221, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+}
+
+.books:hover,
+.shortstories:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #fd7f30 0%, #fdb642 50%);
+}
+
+.our-category .icon {
+    border-radius: 54% 46% 33% 67% / 64% 66% 34% 36%;
+    height: 3rem;
+    width: 3rem;
+    color: white;
+}
+
+.poems .icon,
+.articles .icon {
+    background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+}
+
+.books .icon,
+.shortstories .icon {
+    background-image: linear-gradient(-45deg, #fd7f30 0%, #fdb642 50%);
+} */
