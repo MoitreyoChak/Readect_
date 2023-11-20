@@ -36,8 +36,8 @@ function Login() {
       setPassword("");
       return;
     }
-    // navigate("/");
-    // await checkLogin(LoggedCheckAPI);
+    navigate("/");
+    await checkLogin(LoggedCheckAPI);
     toast.success("Login Success");
   };
   return (
