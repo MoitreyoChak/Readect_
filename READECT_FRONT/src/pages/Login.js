@@ -29,6 +29,7 @@ function Login() {
     }
     //Login request
     const check = await login(LoginAPI, { email, password });
+    console.log(check)
     if (check) {
       toast.error(check);
       setEmail("");

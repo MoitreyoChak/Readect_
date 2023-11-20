@@ -29,7 +29,7 @@ function Profile() {
         Navigate("/");
     };
 
-    console.log(profile);
+    // console.log(profile);
     const [showType, setShowType] = useState("");
     const showFollow = async (e, type) => {
         e.preventDefault();
