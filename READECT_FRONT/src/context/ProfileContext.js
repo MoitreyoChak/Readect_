@@ -23,12 +23,7 @@ const ProfileProvider = ({ children }) => {
   //login using axios
   const login = async (url, body) => {
     try {
-      const { data } = await axios.post(url, body, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json'
-        }
-      });
+      const { data } = await axios.post(url, body);
       console.log(data)
       dispatch({ type: "LOGIN_SUCCESS" });
       return false;
