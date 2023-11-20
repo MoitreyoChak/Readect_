@@ -14,6 +14,7 @@ exports.createAndSendToken = (newReader, statusCode, res) => {
   const cookieOptions = {
     expires: new Date(Date.now() + expries * 24 * 60 * 60 * 1000),
     httpOnly: true,
+    secure: true,
   };
 
   if (environment === "production") cookieOptions.secure = true;
