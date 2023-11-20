@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = require('cors')
+const cors = require("cors");
 const readerRoute = require("./routes/readerRoute");
 const poemRoutes = require("./routes/poemRoutes");
 const bookRoutes = require("./routes/bookRoutes");
@@ -16,7 +16,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const cookieParser = require("cookie-parser");
 const { getOtherReader } = require("./controllers/otherReaderController");
 
-app.use(cors({ origin: '*' }))
+app.use(cors({ origin: process.env.FRONTEND_URL }));
 
 const limiter = rateLimit({
   max: 1000,
