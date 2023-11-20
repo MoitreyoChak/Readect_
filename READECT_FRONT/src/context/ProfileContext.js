@@ -49,8 +49,8 @@ const ProfileProvider = ({ children }) => {
   //Check if logged in
   const checkLogin = async (url) => {
     try {
-      const resp = await axios.get(url);
-      if (resp.data.status === "Success") {
+      const { data } = await axios.get(url);
+      if (data.status === "Success") {
         dispatch({ type: "LOGGED_IN" });
         return true;
       } else {
@@ -66,7 +66,7 @@ const ProfileProvider = ({ children }) => {
   //logout
   const logout = async (url) => {
     try {
-      const resp = await axios.post(url);
+      await axios.post(url);
       dispatch({ type: "LOGGED_OUT" });
     } catch (err) {
       dispatch({ type: "API_ERROR", payload: err });
@@ -77,8 +77,8 @@ const ProfileProvider = ({ children }) => {
   const getMyProfile = async (url) => {
     dispatch({ type: "SET_LOADING" });
     try {
-      const resp = await axios.get(url);
-      dispatch({ type: "MY_PROFILE", payload: resp.data.data });
+      const { data } = await axios.get(url);
+      dispatch({ type: "MY_PROFILE", payload: data.data });
       return true;
     } catch (err) {
       dispatch({ type: "API_ERROR", payload: err });
@@ -88,8 +88,8 @@ const ProfileProvider = ({ children }) => {
   //Get Follow Data
   const getFollowData = async (url) => {
     try {
-      const resp = await axios.get(url);
-      dispatch({ type: "MY_FOLLOW_DATA", payload: resp.data.data });
+      const { data } = await axios.get(url);
+      dispatch({ type: "MY_FOLLOW_DATA", payload: data.data });
       return true;
     } catch (error) {
       dispatch({ type: "API_ERROR", payload: error });
