@@ -23,13 +23,13 @@ function Profile() {
 
     const DoLogout = async (e) => {
         e.preventDefault();
-        const check = await logout(LogoutAPI);
+        await logout(LogoutAPI);
         await checkLogin(LoggedCheckAPI);
         toast.success("Logout Succesfully");
         Navigate("/");
     };
 
-    console.log(profile);
+    // console.log(profile);
     const [showType, setShowType] = useState("");
     const showFollow = async (e, type) => {
         e.preventDefault();

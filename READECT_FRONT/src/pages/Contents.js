@@ -68,7 +68,7 @@ const Contents = () => {
       };
     }
     makeSearch();
-    console.log(searchContent);
+    // console.log(searchContent);
   }, [search]);
 
   useEffect(() => {

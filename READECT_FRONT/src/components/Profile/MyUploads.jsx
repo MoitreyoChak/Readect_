@@ -9,7 +9,7 @@ import UploadEle from "./UploadEle";
 const MyUploads = () => {
     const [type, setType] = useState(0);
     const { myPoems, myArticles, myBooks, myShortStories } = useProfileContext();
-    console.log(myPoems);
+    // console.log(myPoems);
 
     const DisplayType = (e, x) => {
         e.preventDefault();

@@ -1,6 +1,5 @@
 const { createAndSendLogoutToken } = require("./tokenGenerator");
 const catchAsync = require("../utils/catchAsync");
-const AppError = require("../utils/appError");
 
 exports.forcedLogout = catchAsync((req, res, next) => {
   createAndSendLogoutToken(
